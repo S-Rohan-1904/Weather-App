@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:url('https://cutewallpaper.org/21/banff-national-park-wallpapers/Banff-National-Park-Wallpapers-Page-4-4kwallpaper.org.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow:hidden;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    padding: 20px 70px;
+    color:#fff;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.date-container{
+    font-weight: 100;
+}
+.date-container .time{
+    font-size: 70px;
+}
+
+.date-container #am-pm{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.date-container .date{
+    font-size: 30px;
+}
+
+.place-container{
+    text-align: end;
+}
+
+.place-container .time-zone{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.place-container .country{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.info .other-info{
+    display: flex;
+    flex-direction: column;
+    background: rgba(24,24,27, 0.6);
+    padding:20px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 70px 0;
+    border: 1px solid #eee;
+}
+
+.info .other-info .weather-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.forecast{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    color:white;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.forecast-today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding:15px;
+    padding-right: 40px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.6)
+}
+
+.day{
+    padding: 5px 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.temp{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.weather-forecast{
+    display: flex;
+}
+
+.weather-forecast-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.6)
+}
+
+.weather-forecast .weather-forecast-item.day{
+    padding: 15px 15px;
+    background: #3C3C44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.weather-forecast .weather-forecast-item .temp{
+    font-weight: 400;
+    font-size: 12px;
+}
+
+
+@media only screen and  (max-width:730px){
+    
+    .container{
+        padding: 20px;
+    }
+    
+    .forecast{
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+    }
+    .temp {
+        width: max-content;
+    }
+    .forecast .forecast-today .temp{
+        font-size: 14px;
+    }
+
+    .date-container .time{
+        font-size: 50px;
+    }
+
+    .date-container #am-pm{
+        font-size: 20px;
+    }
+
+    .date-container .date{
+        font-size: 20px;
+    }
+
+    .place-container{
+        text-align: end;
+        margin-top: 15px;
+    }
+
+    .place-container .time-zone{
+        font-size: 20px;
+    }
+
+    .info .other-info{
+        padding: 12px;
+    }
+
+    .info .other-info .weather-item{
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 1400px){
+    .forecast{
+        justify-content: start;
+        align-items: none;
+        overflow-x: scroll;
+    }
+}
